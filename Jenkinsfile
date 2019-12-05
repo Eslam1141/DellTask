@@ -21,6 +21,7 @@ pipeline {
             		sh 'dotnet build'		
 		        }
             }
+
         }
        stage('Lint Check') {
             when { equals expected: 'release', actual: 'release' }		 
@@ -28,6 +29,7 @@ pipeline {
                 echo 'we should run lint check here ..'
             }
         }
+
         stage('Unit Test') {
             when { equals expected: 'release', actual: 'release' }		 
             steps {
