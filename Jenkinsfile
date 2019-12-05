@@ -18,6 +18,7 @@ pipeline {
 		dotnet build		
 		}
             }
+	}
         stage('Unit Test') {
 		when { branch pattern: "release/*" }
             steps {
