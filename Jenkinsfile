@@ -58,9 +58,10 @@ pipeline {
 		post {
                         always {
                             archiveArtifacts artifacts: 'Helloworld-${BUILD_NUMBER}.zip', fingerprint: true
-                         
-                        }
-            }
-        }
+                        
+			}
+		}
+	}
+     }
     }
 }
